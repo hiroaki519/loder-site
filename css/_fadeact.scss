@@ -1,0 +1,214 @@
+.paint-main {
+
+  & .paint {
+    opacity: 0;
+   &::after{
+     content: "";
+     position: absolute;
+     z-index: 2;
+     top: 0;
+     left: 0;
+     right: 0;
+     bottom: 0;
+     background-color: white;
+     opacity: 1;
+   } 
+  }
+  & .white-over{
+    opacity: 0;
+  }
+  &.inview {
+    & .paint {
+      &:nth-child(1){
+        @include animation(
+          $name: fade-in,
+          $delay: 0,
+          $duration: .1s,
+          
+      );  
+
+        &::after{
+          overflow: visible;           
+          @include animation(
+            $name: slide-cover-left,
+            $delay: .1s,
+            $duration: 0.7s
+          )
+        }
+      }
+      &:nth-child(2){
+        @include animation(
+          $name: fade-in,
+          $delay:0.4s,
+          $duration: .1s,
+          
+       );  
+
+        &::after{
+          overflow: visible;           
+          @include animation(
+            $name: slide-cover-right,
+            $delay: 0.3s,
+            $duration: 0.6s,
+          
+          )
+        }
+      }
+      &:nth-child(3){
+        @include animation(
+          $name: fade-in,
+          $delay:0.8s,
+          $duration: 0.1s,
+          
+      );  
+
+        &::after{
+          overflow: visible; 
+          @include animation(
+            $name: slide-cover-left,
+            $delay: 0.7s,
+            $duration: 0.5s
+          )
+        }
+      }
+      &:nth-child(4){
+        @include animation(
+          $name: fade-in,
+          $delay:1.3s,
+          $duration: 0.1s,
+          
+      );  
+
+        &::after{
+          overflow: visible; 
+          @include animation(
+            $name: slide-cover-right,
+            $delay: 1.2s,
+            $duration: 0.4s
+          
+          )
+        }
+      }
+      &:nth-child(5){
+        @include animation(
+          $name: fade-in,
+          $delay:1.4s,
+          $duration: 0.1s,
+          
+      );  
+
+        &::after{
+          overflow: visible; 
+          @include animation(
+            $name: slide-cover-left,
+            $delay: 1.3s,
+            $duration: 0.4s
+          
+          )
+        }
+      }
+      &:nth-child(6){
+        @include animation(
+          $name: fade-in,
+          $delay:1.7s,
+          $duration: 0.1s,
+          
+      );  
+
+        &::after{
+          overflow: visible; 
+          @include animation(
+            $name: slide-cover-left,
+            $delay: 1.6s,
+            $duration: 0.3s
+          )
+        }
+      }
+      &:nth-child(7){
+        @include animation(
+          $name: fade-in,
+          $delay:1.9s,
+          $duration: 0.1s,
+          
+      );  
+
+        &::after{
+          overflow: visible; 
+          @include animation(
+            $name: slide-cover-left,
+            $delay: 1.8s,
+            $duration: 0.3s
+          
+          )
+        }
+      }
+      &:nth-child(8){
+        @include animation(
+          $name: fade-in,
+          $delay:2.2s,
+          $duration: 0.1s,
+          
+      );  
+
+        &::after{
+          overflow: visible; 
+          @include animation(
+            $name: slide-cover-left,
+            $delay: 2.1s,
+            $duration: 0.3s
+          
+          )
+        }
+      }
+      &:nth-child(9){
+        @include animation(
+          $name: fade-in,
+          $delay:2.4s,
+          $duration: 0.1s,
+          
+      );  
+
+        &::after{
+          overflow: visible; 
+          @include animation(
+            $name: slide-cover-left,
+            $delay: 2.3s,
+            $duration: 0.6s
+          
+          )
+        }
+      }
+      &:nth-child(10){
+        @include animation(
+          $name: fade-in,
+          $delay:2.8s,
+          $duration: 0.1s,
+          
+      );  
+
+        &::after{
+          overflow: visible; 
+          @include animation(
+            $name: slide-cover-right,
+            $delay: 2.7s,
+            $duration: 0.4s
+          
+          )
+        }
+      }
+    } 
+    // .white-over{
+    //   position: absolute;
+    //   top: 0;
+    //   left: 0;
+    //   right: 0;
+    //   bottom: 0;
+    //   z-index: 100;
+    //   background-color: white;
+    //   @include animation(
+    //     $name:fade-in,
+    //     $delay: 3.5s,
+    //   )    
+    // }
+  }
+}
